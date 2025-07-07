@@ -8,8 +8,15 @@
   --bgcolor: rgb(12, 12, 12);
   --txtcolor: white;
 }
+body{
+    display: flex;
+    padding: 10px;
+    background-color: var(--bgcolor);
+}
 .main {
   display: flex;
+  position: fixed;
+  width: 100vw;
 }
 .side-bar {
   background-color: var(--bgcolor);
@@ -49,7 +56,7 @@
   height: 50px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+
 }
 .main-div img {
   margin-top: 0px;
@@ -75,9 +82,7 @@
   height: fit-content;
   font-size: 14px;
 }
-.top-bar {
-  margin-top: 20px;
-}
+ 
 .top-bar li:last-child {
   margin-left: auto;
 }
@@ -212,16 +217,15 @@
   margin-top: -15px;
   height: 86px;
   width: 110px; 
+  object-fit: cover;
 }
 .side-top{
    display: flex;
   margin-top: 0;
-  margin-bottom: 20px;
-  height: 80px;
+  /* margin-bottom: 20px; */
   width: 220px;
   object-fit: cover;
   background-color: var(--bgcolor);
-  position: fixed;
 } 
 .side-top span{
    margin-top: 10px;
@@ -335,4 +339,6 @@ hr{
   object-fit: cover;
   margin-bottom: 15px;
 }
-
+.closed{
+    display: none;
+}

@@ -31,12 +31,8 @@
 <i class="fa-solid fa-microphone"></i>
 <i class="fa-solid fa-ellipsis-vertical"></i>
 <i class="fa-regular fa-circle-user"></i> -->
-    <div class="side-items bar closed" id="sidebar">
-      <div class="side-top ">
-        <i class="fa-solid fa-bars" id="menu-toggle"></i>
-        <img src="./assets/YouTube-Logo-New-2_2048x.webp" alt="" />
-        <span>PK</span>
-      </div>
+    <div class="side-items closed" id="sidebar">
+      
       <ul class="side-home">
         <li><i class="fa-solid fa-house"></i> <span>Home</span></li>
         <li><i class="fa-solid fa-video"></i> <span>Shorts</span></li>
@@ -88,7 +84,7 @@
 </ul>
 <hr>
 
-      <div class="side-bottom">
+      <div class="side-bottom" >
         <a href="">About</a>
         <a href="">Press</a>
         <a href="">Copyright</a>
@@ -105,12 +101,8 @@
         <a href="">Test new features</a>
         <p>© 2025 Google LLC</p>
       </div>
-        
-    </div>
-    <div class="main">
-      <div class="side-bar">
+    <div class="side-bar" id="side-bar">
         <ul>
-          <li><i class="fa-solid fa-bars" id="menu-toggle"></i></li>
           <li><i class="fa-solid fa-house"></i> <span>Home</span></li>
           <li><i class="fa-solid fa-video"></i> <span>Shorts</span></li>
           <li><i class="fa-solid fa-tv"></i> <span>Subscriptions</span></li>
@@ -120,11 +112,21 @@
           </li>
         </ul>
       </div>
+    </div>
+    <div class="main">
+        <!-- <div class="side-top ">
+        <i class="fa-solid fa-bars" id="menu-toggle"></i>
+        <img src="./assets/YouTube-Logo-New-2_2048x.webp" alt="" />
+        <span>PK</span>
+      </div> -->
       <div class="main-div">
         <ul class="top-bar">
           <li>
-            <img src="./assets/YouTube-Logo-New-2_2048x.webp" alt="" />
-            <span>PK</span>
+             <div class="side-top ">
+        <i class="fa-solid fa-bars" id="menu-toggle"></i>
+        <img src="./assets/YouTube-Logo-New-2_2048x.webp" alt="" />
+        <span>PK</span>
+      </div>
           </li>
           <li>
             <div class="search-container">
@@ -164,7 +166,7 @@
             </li>
           </ul>
         </div>
-      </div>
+    </div>
        <div id=card-container>
            <div id="menu-card" class="menu-card">
 
@@ -239,4 +241,5 @@
         });
     </script>
   </body>
+  <script src="index.js"></script>
 </html>
