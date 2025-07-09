@@ -1,4 +1,4 @@
-import { card } from "../data/data";
+import { card } from "../data/data.js";
 // const menuToggle=document.getElementById("menu-toggle");
 // const navBar=document.querySelector(".bar");
 // menuToggle.onclick=()=>{
@@ -39,7 +39,7 @@ signIn.onclick=function(){
 
         const menuCard=document.getElementById("card-container");
         
-        card.map(cardItems => {
+        card.map((cardItems,index) => {
             const divElement= document.createElement("div");
             divElement.className="menu-card";
              divElement.innerHTML=`
@@ -57,8 +57,10 @@ signIn.onclick=function(){
              `             
             menuCard.append(divElement);
             divElement.onclick=function(){
-                window.location.href=`../video/video.html?chanelLogo=${cardItems.logo}&title=${cardItems.title}
-                &chanelName=${cardItems.channelName}&views=${cardItems.views}&duration=${cardItems.duration}&hashtag=${cardItems.hashtag}&desc=${cardItems.desc}`;
+            //     window.location.href=`../video/video.html?chanelLogo=${cardItems.logo}&title=${cardItems.title}
+            //     &chanelName=${cardItems.channelName}&views=${cardItems.views}&duration=${cardItems.duration}&hashtag=${cardItems.hashtag}&desc=${cardItems.desc}`;
+            // 
+            window.location.href=`../video/video.html?index=${index}`
             }
         });
  
