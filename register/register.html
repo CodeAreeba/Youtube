@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+ </head>
+ <body>
+    <section class="nlogin" id="login-page">
+            <div class="login-card">
+                <h1>Sign Up</h1>
+                <div class="cross-mark" onclick="handleLoginClick()"><i class="fa-solid fa-xmark"></i></div>
+                <div class="entries">
+                <label for="email">Email:</label> 
+                <input id="email" class="enter" type="email" placeholder="Email">
+                <label for="name">Name:</label>
+                <input id="name" class="enter" type="name" placeholder="Name">
+                <label for="password">Password:</label>
+                <input id="password" class="enter" type="password" placeholder="Password">
+                <p>Already have an account? <b onclick="handleSignupClick()">Log in</b></p>
+                 </div>
+                  
+                <button class="login-btn" id="signUp-btn">Sign Up</button>
+                 
+    </section>
+ </body>
+ <script src="register.js"></script>
+ </html>

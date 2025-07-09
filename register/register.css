@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --bgcolor: rgb(23, 22, 22);
+  --txtcolor: white;
+  --mainbg: #272727;
+}
+.nlogin{
+  height: 100vh;
+  width: 100%;
+  background-color:var(--mainbg);
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-card{
+  background:var(--bgcolor);   
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+  padding: 20px;
+   
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* margin-top: 20vh;  */
+}
+.login-card h1{
+  font-size: 30px;
+  font-weight: bold;
+  color:var(--txtcolor);
+  left: 0;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.entries{
+  margin-top: 30px;
+
+}
+.cross-mark{
+  color: var(--txtcolor);
+  font-size: 25px;
+  margin-right: -300px;
+  margin-top: -70px;
+  cursor: pointer;
+  
+}
+.cross-mark-up{
+  color: rgb(92, 92, 92);
+  font-size: 25px;
+  margin-right: -300px;
+  margin-top: -30px;
+  cursor: pointer;
+  
+}
+.enter{
+  width: 350px;
+  height: 40px;
+  padding-left: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid rgb(175, 174, 174);
+}
+.login-btn{
+  width: 350px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: var(--txtcolor);
+  color: var(--bgcolor);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.login-btn:hover{
+  background-color: rgb(244, 242, 239);
+  cursor: pointer;
+}
+.login-card p b{
+  color: var(--color);
+  font-weight: bold;
+}
+.entries label{
+  color: var(--txtcolor);
+  /* font-size: 18px; */
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+}
+.stay-logged-in{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  color: var(--txtcolor);
+  padding: 10px;
+  gap: 10px;
+}
+.login-card p{
+  color: var(--txtcolor);
+}
