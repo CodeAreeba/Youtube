@@ -1,3 +1,4 @@
+import { card } from "../data/data";
 // const menuToggle=document.getElementById("menu-toggle");
 // const navBar=document.querySelector(".bar");
 // menuToggle.onclick=()=>{
@@ -31,8 +32,34 @@ signIn.onclick=function(){
     window.location.href=`../login/login.html`;
 }
 
-function handleSignInClick(){
-  window.location.href=`login/login.html`;
-}
+// function handleSignInClick(){
+//   window.location.href=`login/login.html`;
+// }
+
+
+        const menuCard=document.getElementById("card-container");
+        
+        card.map(cardItems => {
+            const divElement= document.createElement("div");
+            divElement.className="menu-card";
+             divElement.innerHTML=`
+        <div class="card-image">
+            <img src=${cardItems.img} />
+            </div>
+            <div class="channel-logo">
+            <img src="${cardItems.logo}" alt="Channel Logo" />
+            <div class="video-details">
+                <h3>${cardItems.title}</h3>
+                <span>${cardItems.channelName}</span>
+                <span>${cardItems.views} • ${cardItems.duration}</span>
+            </div>
+        </div>
+             `             
+            menuCard.append(divElement);
+            divElement.onclick=function(){
+                window.location.href=`../video/video.html?chanelLogo=${cardItems.logo}&title=${cardItems.title}
+                &chanelName=${cardItems.channelName}&views=${cardItems.views}&duration=${cardItems.duration}&hashtag=${cardItems.hashtag}&desc=${cardItems.desc}`;
+            }
+        });
  
 
