@@ -300,6 +300,114 @@ nav {
   color: #e0e0e0;
   line-height: 1.5;
 }
+.comments{
+   max-width: calc(100% - 260px);
+   padding: 12px 16px;
+    margin: 20px 0px;
+    margin-left: 90px; 
+}
+.comments-section{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+.comments-section h3{
+    font-size: 20px;
+}
+.comments-section span{
+    font-size: 16px;
+}
+.add-comments{
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+}
+.add-comments img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+ 
+.comment-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  outline: none;
+  color: white;
+  flex: 1;
+  font-size: 16px;
+  padding: 8px;
+}
+.comment {
+  display: flex;
+  gap: 10px;
+  color: white;
+   
+  padding: 10px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.user-info {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.username {
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.time {
+  color: #aaa;
+}
+
+.comment-text {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.emoji {
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.actions i {
+  cursor: pointer;
+}
+
+.count {
+  margin-left: -5px;
+}
+
+.reply {
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
 
 
 

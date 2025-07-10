@@ -69,12 +69,43 @@ const menuCard = document.getElementById("suggestion-side");
           ${cardItems.desc}
         </div>
         </div>
+        
         `;
+        const commentsDetails=document.getElementById("comments");
+        cardItems.comments.map((comments) => {
+        const comCard = document.createElement("div");
+        comCard.className = "comment-card";
+        comCard.innerHTML=`
+            <img
+              class="profile-pic"
+              src="./assets/commentpro.jpg"
+              alt="Profile Picture"
+            />
+            <div class="comment-content">
+              <div class="user-info">
+                <span class="username">${comments.username}}</span>
+                <span class="time">${comments.time}</span>
+              </div>
+              <p class="comment-text">
+                 ${comments.text}
+              </p>
+              <div class="actions">
+                <i class="fa-regular fa-thumbs-up"></i
+                ><span class="count">${comments.likes}</span>
+                <i class="fa-regular fa-thumbs-down"></i>
+                <span class="reply">Reply</span>
+              </div>
+            </div>
+        
+       
+         `
+        commentsDetails.append(comCard);
+        })
         };
            });
         const params = new URLSearchParams(window.location.search);
         const index= parseInt(params.get("index"));
-        const matched = card.filter((cardItems, i) => i === index);
+        const matched = card.filter(( _ , i) => i === index)[0];
         if(matched){
             const videoDetails = document.getElementById("video-details");
       videoDetails.innerHTML = `
@@ -86,9 +117,9 @@ const menuCard = document.getElementById("suggestion-side");
           </h4>
         <div class="details-sec">
             <div class="video-left">
-              <img src="${matched.chanelLogo}" alt="" />
+              <img src="${matched.logo}" alt="" />
               <div class="mid-sec">
-                <h4>${matched.chanelName}</h4>
+                <h4>${matched.channelName}</h4>
                 <span>804k subscribers</span>
               </div>
               <button>Subscribe</button>
