@@ -31,7 +31,12 @@ document.getElementById("signUp-btn").addEventListener("click", function (event)
 //   document.getElementById("password").value = "";
 
 //   handleLoginClick(); // switch to login page
+ window.location.href=`../login/login.html`
 });
+const signUp=document.getElementById("logI");
+signUp.onclick=function(){
+    window.location.href=`../login/login.html`;
+}
 
 
 

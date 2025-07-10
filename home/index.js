@@ -1,4 +1,4 @@
-import { card } from "../data/data.js";
+ import { card } from "../data/data.js";
 // const menuToggle=document.getElementById("menu-toggle");
 // const navBar=document.querySelector(".bar");
 // menuToggle.onclick=()=>{
@@ -19,7 +19,10 @@ import { card } from "../data/data.js";
 //   else{
 //   sidebar.style.display="block";}
 // });
-
+if (!localStorage.getItem("cards")) {
+    localStorage.setItem("cards", JSON.stringify(card));
+  }
+const cards = JSON.parse(localStorage.getItem("cards"));
 const toggleBtn = document.getElementById("menu-toggle");
 const sidebar = document.getElementById("side-bar");
 
@@ -27,22 +30,21 @@ toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
 
-const signIn=document.getElementById("sign-in");
-signIn.onclick=function(){
-    window.location.href=`../login/login.html`;
-}
+const signIn = document.getElementById("sign-in");
+signIn.onclick = function () {
+  window.location.href = `../login/login.html`;
+};
 
 // function handleSignInClick(){
-//   window.location.href=`login/login.html`;
+//   window.location.href=login/login.html;
 // }
 
+const menuCard = document.getElementById("card-container");
 
-        const menuCard=document.getElementById("card-container");
-        
-        card.map((cardItems,index) => {
-            const divElement= document.createElement("div");
-            divElement.className="menu-card";
-             divElement.innerHTML=`
+cards.map((cardItems, index) => {
+  const divElement = document.createElement("div");
+  divElement.className = "menu-card";
+  divElement.innerHTML = `
         <div class="card-image">
             <img src=${cardItems.img} />
             </div>
@@ -54,14 +56,12 @@ signIn.onclick=function(){
                 <span>${cardItems.views} • ${cardItems.duration}</span>
             </div>
         </div>
-             `             
-            menuCard.append(divElement);
-            divElement.onclick=function(){
-            //     window.location.href=`../video/video.html?chanelLogo=${cardItems.logo}&title=${cardItems.title}
-            //     &chanelName=${cardItems.channelName}&views=${cardItems.views}&duration=${cardItems.duration}&hashtag=${cardItems.hashtag}&desc=${cardItems.desc}`;
-            // 
-            window.location.href=`../video/video.html?index=${index}`
-            }
-        });
- 
-
+             `;
+  menuCard.append(divElement);
+  divElement.onclick = function () {
+    //     window.location.href=`../video/video.html?chanelLogo=${cardItems.logo}&title=${cardItems.title}
+    //     &chanelName=${cardItems.channelName}&views=${cardItems.views}&duration=${cardItems.duration}&hashtag=${cardItems.hashtag}&desc=${cardItems.desc}`;
+    //
+    window.location.href = `../video/video.html?index=${index}`;
+  };
+});
