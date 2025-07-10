@@ -73,6 +73,9 @@ card.map((cardItems) => {
     `;
 
     const commentsDetails = document.getElementById("comments");
+    const commentCountEl = document.getElementById("comment-count");
+    commentsDetails.innerHTML = ""; // Clear previous comments
+    commentCountEl.textContent = cardItems.comments.length;
 
     cardItems.comments.map((comments) => {
       const comCard = document.createElement("div");
@@ -159,7 +162,42 @@ if (matched) {
           ${matched.desc}
         </div>
         </div>
-        
-        
         `;
+    const commentsDetails = document.getElementById("comments");
+    const commentCountEl = document.getElementById("comment-count");
+    commentsDetails.innerHTML = ""; // Clear previous comments
+    commentCountEl.textContent = matched.comments.length;
+
+    matched.comments.map((comments) => {
+      const comCard = document.createElement("div");
+      comCard.className = "comment-card";
+
+      comCard.innerHTML = `
+    <div class="comData">
+      <img
+        class="profile-pic"
+        src="./assets/commentpro.jpg"
+        alt="Profile Picture"
+      />
+      <div class="comment-content">
+        <div class="user-info">
+          <span class="username">${comments.username}</span>
+          <span class="time">${comments.time}</span>
+        </div>
+        <p class="comment-text">
+          ${comments.text}
+        </p>
+      </div> <!-- closing comment-content -->
+    </div> <!-- closing comData -->
+    <div class="actions">
+      <i class="fa-regular fa-thumbs-up"></i>
+      <span class="count">${comments.likes}</span>
+      <i class="fa-regular fa-thumbs-down"></i>
+      <span class="reply">Reply</span>
+    </div>
+  `;
+
+      commentsDetails.append(comCard);
+    });
+
 }
