@@ -1,10 +1,10 @@
 import { card } from "../data/data.js";
 const menuCard = document.getElementById("suggestion-side");
 
-      card.map((cardItems) => {
-        const divElement = document.createElement("div");
-        divElement.className = "menu-card";
-        divElement.innerHTML = `
+card.map((cardItems) => {
+  const divElement = document.createElement("div");
+  divElement.className = "menu-card";
+  divElement.innerHTML = `
         <div class="card-image">
             <img src=${cardItems.img} />
             </div>
@@ -19,10 +19,10 @@ const menuCard = document.getElementById("suggestion-side");
             </div>
         </div>
              `;
-        menuCard.append(divElement);
-        divElement.onclick = function () {
-          const videoDetails = document.getElementById("video-details");
-          videoDetails.innerHTML = `
+  menuCard.append(divElement);
+  divElement.onclick = function () {
+    const videoDetails = document.getElementById("video-details");
+    videoDetails.innerHTML = `
           <video controls>
             <source src="./assets/demo-video.mp4" type="video/mp4" />
           </video>
@@ -70,45 +70,49 @@ const menuCard = document.getElementById("suggestion-side");
         </div>
         </div>
         
-        `;
-        const commentsDetails=document.getElementById("comments");
-        cardItems.comments.map((comments) => {
-        const comCard = document.createElement("div");
-        comCard.className = "comment-card";
-        comCard.innerHTML=`
-            <img
-              class="profile-pic"
-              src="./assets/commentpro.jpg"
-              alt="Profile Picture"
-            />
-            <div class="comment-content">
-              <div class="user-info">
-                <span class="username">${comments.username}}</span>
-                <span class="time">${comments.time}</span>
-              </div>
-              <p class="comment-text">
-                 ${comments.text}
-              </p>
-              <div class="actions">
-                <i class="fa-regular fa-thumbs-up"></i
-                ><span class="count">${comments.likes}</span>
-                <i class="fa-regular fa-thumbs-down"></i>
-                <span class="reply">Reply</span>
-              </div>
-            </div>
-        
-       
-         `
-        commentsDetails.append(comCard);
-        })
-        };
-           });
-        const params = new URLSearchParams(window.location.search);
-        const index= parseInt(params.get("index"));
-        const matched = card.filter(( _ , i) => i === index)[0];
-        if(matched){
-            const videoDetails = document.getElementById("video-details");
-      videoDetails.innerHTML = `
+    `;
+
+    const commentsDetails = document.getElementById("comments");
+
+    cardItems.comments.map((comments) => {
+      const comCard = document.createElement("div");
+      comCard.className = "comment-card";
+
+      comCard.innerHTML = `
+    <div class="comData">
+      <img
+        class="profile-pic"
+        src="./assets/commentpro.jpg"
+        alt="Profile Picture"
+      />
+      <div class="comment-content">
+        <div class="user-info">
+          <span class="username">${comments.username}</span>
+          <span class="time">${comments.time}</span>
+        </div>
+        <p class="comment-text">
+          ${comments.text}
+        </p>
+      </div> <!-- closing comment-content -->
+    </div> <!-- closing comData -->
+    <div class="actions">
+      <i class="fa-regular fa-thumbs-up"></i>
+      <span class="count">${comments.likes}</span>
+      <i class="fa-regular fa-thumbs-down"></i>
+      <span class="reply">Reply</span>
+    </div>
+  `;
+
+      commentsDetails.append(comCard);
+    });
+  };
+});
+const params = new URLSearchParams(window.location.search);
+const index = parseInt(params.get("index"));
+const matched = card.filter((_, i) => i === index)[0];
+if (matched) {
+  const videoDetails = document.getElementById("video-details");
+  videoDetails.innerHTML = `
           <video controls>
             <source src="./assets/demo-video.mp4" type="video/mp4" />
           </video>
@@ -158,6 +162,4 @@ const menuCard = document.getElementById("suggestion-side");
         
         
         `;
-        }
-
-        
+}

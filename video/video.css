@@ -300,11 +300,22 @@ nav {
   color: #e0e0e0;
   line-height: 1.5;
 }
+.comData{
+    display: flex;
+    gap: 10px;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+}
 .comments{
    max-width: calc(100% - 260px);
    padding: 12px 16px;
     margin: 20px 0px;
     margin-left: 90px; 
+}
+.comment-card{
+    padding: 10px;
 }
 .comments-section{
     display: flex;
@@ -392,6 +403,7 @@ nav {
   gap: 10px;
   font-size: 14px;
   color: #aaa;
+  margin-left: 50px;
 }
 
 .actions i {
