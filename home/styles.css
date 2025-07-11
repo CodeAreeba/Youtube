@@ -502,6 +502,11 @@ hr {
   .menu-card {
     width: 100%;
   }
+   .menu-card .card-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+} 
 
   .side-bar {
     display: none;
