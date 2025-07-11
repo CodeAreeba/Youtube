@@ -22,6 +22,7 @@
 if (!localStorage.getItem("cards")) {
     localStorage.setItem("cards", JSON.stringify(card));
   }
+
 const cards = JSON.parse(localStorage.getItem("cards"));
 const toggleBtn = document.getElementById("menu-toggle");
 const sidebar = document.getElementById("side-bar");

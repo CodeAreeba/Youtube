@@ -466,12 +466,81 @@ hr {
   font-size: 14px;
 }
 
-/* .channel-logo {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  object-fit: cover;
-} */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  padding: 10px;
+}
+
+.menu-card {
+  width: calc(33.33% - 16px);
+}
+
+
+@media (max-width: 1024px) {
+  .menu-card {
+    width: calc(50% - 16px);
+  }
+  .search-bar {
+    display: none;
+  }
+
+  .search-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    padding: 8px;
+    color: white;
+    margin-right: 10px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .menu-card {
+    width: 100%;
+  }
+
+  .side-bar {
+    display: none;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .search-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    padding: 8px;
+    color: white;
+    margin-right: 10px;
+  }
+
+  .main-div {
+    width: 100%;
+  }
+
+  .top-buttons ul {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px;
+    justify-content: flex-start;
+  }
+
+   .top-buttons ul li {
+  display: none; 
+}
+
+.top-buttons ul li:nth-child(-n+3),
+.top-buttons ul li:last-child {
+  display: inline-block; 
+}
+
+}
 
  
 

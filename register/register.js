@@ -33,7 +33,7 @@ document.getElementById("signUp-btn").addEventListener("click", function (event)
 //   handleLoginClick(); // switch to login page
  window.location.href=`../login/login.html`
 });
-const signUp=document.getElementById("logI");
+const signUp=document.getElementById("logIn");
 signUp.onclick=function(){
     window.location.href=`../login/login.html`;
 }

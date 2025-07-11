@@ -177,7 +177,7 @@
     </main>
     <script>
       window.addEventListener("DOMContentLoaded", () => {
-        const profileUrl = JSON.parse(localStorage.getItem("profilePic"));
+        const profileUrl = localStorage.getItem("profilePic");
         const signInBtn = document.getElementById("sign-in");
         const profileImg = document.getElementById("profile-pic");
 

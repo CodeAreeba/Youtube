@@ -6,7 +6,8 @@ const input = document.getElementById("comment-input");
 const params = new URLSearchParams(window.location.search);
 const index = parseInt(params.get("index"));
 const matched = card.filter((_, i) => i === index)[0];
-const profile = JSON.parse(localStorage.getItem("profilePic"));
+const profile = localStorage.getItem("profilePic");
+
 // Render suggestions sidebar
 function renderSuggestions() {
   card.map((cardItems, i) => {
