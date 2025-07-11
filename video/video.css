@@ -527,8 +527,11 @@ nav {
 }
 
 @media (max-width: 768px) {
+  body{
+    width: calc(100% - 30px);
+  }
   .suggestion-side .menu-card {
-    width: 100%;
+    width: calc(100% - 40px);
   }
 
   .search-bar {
@@ -598,6 +601,9 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     
+  }
+  .video-section{
+    width: calc(100% - 40px);
   }
 }
 

@@ -499,6 +499,9 @@ hr {
 
 
 @media (max-width: 650px) {
+  body{
+    width: calc(100% - 10px);
+  }
   .menu-card {
     width: 100%;
   }
